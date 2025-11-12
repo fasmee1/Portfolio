@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15%;
+}
+
+section {
+  height: 100vh;
+  /* border: 1px solid blue; */
+  /* width: 100vw; */
+  overflow: hidden;
+
+}
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.text-center {
+  background: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+.text-center h1 {
+  color: #000;
+
+  font-size: 12px;
+}
+
+
+.text-name-hero {
+  font-size: clamp(2rem, 12vw, 11.7rem);
+  /* ปรับขนาดตามจอ ต่ำสุด 2rem สูงสุด 11.7rem */
+  text-align: center;
+  font-weight: 1000;
+  background: linear-gradient(to top, #ffffff, #4e4e4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: min(-4rem, -4vw);
+  /* ปรับ margin ตามขนาดจอด้วย */
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: fit-content;
+  padding: 0 clamp(1rem, 4vw, 4rem);
+  /* ปรับ padding ตามขนาดจอ */
+  width: 100%;
+  max-width: 1920px;
+  /* จำกัดความกว้างสูงสุด */
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  /* จัดกึ่งกลาง */
+}
+
+.img-hero {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+
+/* section2 */
+.img-hero img {
+  position: absolute;
+  top: min(-200px, -5vw);
+  width: min(520px, 200%);
+  left: 0;
+  right: 0;
+  height: auto;
+  max-height: 90vh;
+  /* จำกัดความสูงไม่ให้เกินจอ */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+
+.text-hero {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-hero-1 {
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 1.8;
+  /* border: 1px solid red; */
+  width: fit-content;
+
+}
+
+.btn-hero {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+
+
+
+.btn-hero button {
+  /* 1. กำหนดรูปร่างปุ่มให้เป็นวงรีและมีขนาดเหมาะสม */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 40px;
+  /* ทำให้ปุ่มโค้งมน */
+  cursor: pointer;
+
+  /* 2. สีพื้นหลังแบบไล่ระดับ (Gradient) */
+  background: linear-gradient(90deg,
+      #000000 0%,
+      /* สีดำด้านซ้าย (คล้ายกับขอบภาพ) */
+      #2f004c 30%,
+      /* สีม่วงอ่อน */
+      #FF00FF 70%,
+      /* สีชมพูสด */
+      #ffd07a 100%
+      /* สีส้มอมชมพูอ่อนๆ */
+    );
+
+  /* 3. สีและเงาของข้อความ (Neon Text Effect) */
+  color: #FFFFFF;
+  /* สีตัวอักษร */
+  font-size: 24px;
+  font-family: sans-serif;
+  /* แนะนำให้ใช้ font ที่ดูทันสมัย */
+  font-weight: bold;
+
+  /* เงาสีชมพูที่เข้ากับสีพื้นหลัง */
+
+  /* 4. เงารอบปุ่ม (Neon Glow Box-Shadow) */
+  /* สร้างเงาสีม่วง/ชมพูหลายชั้นเพื่อเลียนแบบแสงนีออน */
+  border: 1px solid white;
+  /* 5. การเปลี่ยนค่าแบบนุ่มนวลเมื่อมีการเปลี่ยนแปลง (เช่น ตอน hover) */
+  transition: all 0.3s ease;
+  transform-origin: right center;
+}
+
+/* 6. เอฟเฟกต์เมื่อเมาส์ชี้ (Hover Effect) ให้แสงสว่างขึ้นอีก */
+.btn-hero button:hover {
+  box-shadow:
+    0 0 15px rgba(255, 0, 255, 1),
+    /* สว่างขึ้นมาก */
+    0 0 30px rgba(160, 32, 240, 0.8),
+    0 0 40px rgba(160, 32, 240, 0.5);
+  /* แสงกว้างขึ้น */
+  transform: rotate(-4deg);
+}
+
+/* -------------------- skill --------------- */
+.section-skill {
+  margin-top: 10rem;
+  min-height: 100vh;
+  height: auto;
+}
+
+.grid-main {
+  position: relative;
+  /* border: 1px solid #0418b1; */
+  height: 120px;
+  overflow: hidden;
+  /* hide overflowing duplicated items for the slider */
+}
+
+.skill-grid {
+  display: flex;
+  height: 80px;
+  width: auto;
+  position: absolute;
+  left: 0;
+  gap: 70px;
+  cursor: pointer;
+}
+
+.skill-grid {
+  display: flex;
+  height: 80px;
+  width: auto;
+  position: absolute;
+  left: 0;
+  gap: 70px;
+  will-change: transform;
+  transform: translateZ(0);
+  /* promote to GPU for smoother animation */
+}
+
+
+.skill-grid div {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: auto;
+  /* don't force full width */
+  flex: 0 0 auto;
+  /* prevent flex children from stretching */
+  /* border: 1px solid #b10404; */
+
+}
+
+.skill-grid div img {
+  height: 80px;
+  width: 80px;
+}
+
+.skill-grid div h1 {
+  font-size: 1rem;
+  color: #ffffff;
+  align-self: center;
+  font-weight: 600;
+}
+
+.img-left-main {
+  position: relative;
+  /* border: 1px solid #0418b1; */
+  margin-top: 55px;
+  height: 290px;
+
+
+}
+
+.img-left-grid {
+  display: flex;
+  height: 290px;
+  width: 100%;
+  position: absolute;
+  gap: 8px;
+  right: 500px;
+
+
+}
+
+.img-left-grid div {
+  min-width: 350px;
+  /* border: 1px solid #b10404; */
+  border-radius: 25px;
+}
+
+.img-left-grid div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.img-right-main {
+  position: relative;
+  /* border: 1px solid #0418b1; */
+  margin-top: 10px;
+  height: 290px;
+
+
+
+}
+
+.img-right-grid {
+  display: flex;
+  height: 290px;
+  width: 100%;
+  position: absolute;
+  left: -500px;
+  gap: 8px;
+}
+
+.img-right-grid div {
+  min-width: 350px;
+  border-radius: 25px;
+}
+
+.img-right-grid div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+
+/* -------------------------- aboutme --------------- */
+.section-aboutme {
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 0;
+  flex-direction: column;
+
+
+}
+
+.about-box-main {
+  /* border: 1px solid blue; */
+  padding: 2rem;
+  width: clamp(300px, 50%, 800px);
+  /* ปรับขนาดตามจอ */
+  text-align: center;
+}
+
+.about-box-main h1 {
+  font-size: 7.5rem;
+  margin-bottom: 1rem;
+  color: rgb(32, 32, 32);
+  font-weight: 800;
+  /* สีตัวอักษรข้างใน */
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  /* เส้นขอบสีแดง */
+}
+
+
+.about-box-main p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.imgbootom-right {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 250px;
+  opacity: 0;
+}
+
+.imgbootom-lift {
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 250px;
+  opacity: 0;
+}
+
+.imgtop-lift {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 250px;
+  opacity: 0;
+}
+
+.imgtop-right {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 300px;
+  opacity: 0;
+}
+
+/* ------------------- Services --------------- */
+
+.Services-section {
+  position: relative;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  /* align-items: center; */
+  background: white;
+  border-radius: 68px 68px 0 0;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 10rem;
+
+}
+
+.Services-box-main {
+  /* border: 1px solid blue; */
+  padding: 2rem;
+  width: clamp(300px, 90%, 1200px);
+  /* ปรับขนาดตามจอ */
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.Services-box-main h1 {
+  font-size: 7.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+
+  color: rgb(255, 255, 255);
+  /* สีตัวอักษรข้างใน */
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.389);
+}
+
+.Service-box {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  gap: 50px;
+}
+
+.Service-box .box {
+  border-bottom: 2px solid #3d3d3d;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  transform-origin: bottom;
+  /* ให้การเคลื่อนขึ้นดูนุ่ม */
+}
+
+
+
+.Service-box .box h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  width: 10%;
+}
+
+.Service-box .box div {
+  padding: 1rem;
+  border-radius: 20px;
+  /* height: fit-content; */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  /* border: 1px solid #ff0000; */
+  width: 100%;
+}
+
+.Service-box p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+}
+
+.Service-box h2 {
+  font-size: 3rem;
+
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  /* border: 1px solid #00ff00; */
+}
+
+
+/*   <!-- -------------- job ----------------- --> */
+
+.Project-section {
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-top: -5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 0;
+  flex-direction: column;
+  border-radius: 68px 68px 0 0;
+  background: #000;
+  min-height: 100vh;
+  height: auto;
+  /* เพื่อให้มีที่ให้ scroll */
+
+}
+
+.Project-section h1 {
+
+  color: rgb(0, 0, 0);
+  /* สีตัวอักษรข้างใน */
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  font-size: 7.5rem;
+  font-weight: 800;
+}
+
+.Project-slide-x {
+  /* border: 2px solid #ff0000; */
+  height: 100vh;
+
+  min-width: 100vw;
+  width: auto;
+  height: 100%;
+}
+
+.box-project-container {
+  border: 1px solid #ffffff;
+  overscroll-behavior: none;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.box-project {
+  height: 90vh;
+  width: 90vw;
+  border-radius: 68px;
+  border: 1px solid #ffffff;
+}
