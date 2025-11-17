@@ -5,7 +5,7 @@ let scollingboxskill = gsap.timeline({
   trigger: ".skill-grid",
   start: "top 80%",
   end: "top -980px",
-  scrub: 3,
+  scrub: 0.5,
   // markers: true,
  }
 });
@@ -104,20 +104,58 @@ gsap.utils.toArray(".Service-box .box").forEach((box, i) => {
 
 
 // -------------------- Projects Box Animation ------------------ //
-let sections = gsap.utils.toArray(".box-project-container");
+let scollProjectBox = gsap.timeline({
+ scrollTrigger: {
+  trigger: ".section-project",
+  start: "top 80%",
+  end: "top 50%",
+  scrub: 3,
+  markers: true,
+ }
+});
+scollProjectBox.to(".section-project h1", { color: "#ffffffff", duration: 10, ease: "none" });
 
-gsap.to(sections, {
+let sections = gsap.utils.toArray(".panel");
+
+// 1. กำหนด Timeline หลักสำหรับการเลื่อนแนวนอน
+let horizontalScroll = gsap.to(sections, {
  xPercent: -100 * (sections.length - 1),
  ease: "none",
  scrollTrigger: {
-  trigger: ".Project-slide-x",
+  trigger: ".container",
   pin: true,
   scrub: 1,
   snap: 1 / (sections.length - 1),
-  // base vertical scrolling on how wide the container is so it feels more natural.
-  end: "+=3500",
+  end: "+=3000",
+  id: "main-scroll"
  }
 });
+
+// 2. ลูปสร้างแอนิเมชันย่อยสำหรับ panel__number
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+ const number = panel.querySelector('.panel-box-main');
+ gsap.fromTo(number,
+  { y: 50, opacity: 1, scale: 0.1 },
+  {
+   y: 0,
+   opacity: 1,
+   scale: 1,
+   duration: 0.8,
+   ease: "power3.out",
+   scrollTrigger: {
+    trigger: panel,
+    start: "top 90%",
+    end: "top 0%",
+    // containerAnimation: horizontalScroll, // ใช้สำหรับการเลื่อนแนวนอน
+    scrub: 1,
+    // markers: true,
+   }
+
+  }
+ );
+});
+
+
 
 
 
