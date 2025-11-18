@@ -100,7 +100,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #aa2a2a;
+  /* border: 1px solid #aa2a2a; */
 }
 
 /* section2 */
@@ -110,7 +110,7 @@ nav ul li a {
   width: min(520px, 200%);
   right: 10%;
   left: -10%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   height: auto;
   width: 37vw;
   /* จำกัดความสูงไม่ให้เกินจอ */
@@ -166,25 +166,16 @@ nav ul li a {
       /* สีส้มอมชมพูอ่อนๆ */
     );
 
-  /* 3. สีและเงาของข้อความ (Neon Text Effect) */
   color: #FFFFFF;
-  /* สีตัวอักษร */
   font-size: 24px;
   font-family: sans-serif;
-  /* แนะนำให้ใช้ font ที่ดูทันสมัย */
   font-weight: bold;
 
-  /* เงาสีชมพูที่เข้ากับสีพื้นหลัง */
-
-  /* 4. เงารอบปุ่ม (Neon Glow Box-Shadow) */
-  /* สร้างเงาสีม่วง/ชมพูหลายชั้นเพื่อเลียนแบบแสงนีออน */
   border: 1px solid white;
-  /* 5. การเปลี่ยนค่าแบบนุ่มนวลเมื่อมีการเปลี่ยนแปลง (เช่น ตอน hover) */
   transition: all 0.3s ease;
   transform-origin: right center;
 }
 
-/* 6. เอฟเฟกต์เมื่อเมาส์ชี้ (Hover Effect) ให้แสงสว่างขึ้นอีก */
 .btn-hero button:hover {
   box-shadow:
     0 0 15px rgba(255, 0, 255, 1),
@@ -822,6 +813,4 @@ bottom: 0%;
 .name h1{
   font-size: 5rem;
     line-height: 1.1;
-
-
 }
