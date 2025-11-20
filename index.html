@@ -15,15 +15,16 @@
       <h1>Welcome to My Portfolio</h1>
     </div>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#section-skill">Skill</a></li>
+      <li><a href="#section-aboutme">About</a></li>
+      <li><a href="#Services-section">Services</a></li>
+      <li><a href="#section-contact-me">Contact</a></li>
     </ul>
   </nav>
 
 
-  <section class="Home">
+  <section class="Home" id="Home">
 
     <h2 class="text-name-hero">HI, I'M FASMEE</h2>
     <div class="hero">
@@ -44,7 +45,7 @@
 
   </section>
 
-  <section class="section-skill">
+  <section class="section-skill" id="section-skill">
     <!--skill -->
     <div class="grid-main">
       <div class="skill-grid">
@@ -199,7 +200,7 @@
 
   <!-- -------------- About Me ---------------- -->
 
-  <section class="section-aboutme">
+  <section class="section-aboutme" id="section-aboutme">
     <img src="img/aboutme/img3.png" class="imgtop-lift" alt="">
     <img src="img/aboutme/img4.png" class="imgtop-right" alt="">
     <img src="img/aboutme/img1.png" class="imgbootom-right" alt="">
@@ -225,7 +226,7 @@
 
 
   <!-- -------------- Services ---------------- -->
-  <section class="Services-section">
+  <section class="Services-section" id="Services-section">
 
     <div class="Services-box-main">
       <h1>SERVICES</h1>
@@ -294,10 +295,13 @@
         <div class="panel-box-main">
           <div class="panel-text-btn">
             <div class="panel-text">
-              <h2>JOB 1</h2>
-              <p>detail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex, quisquam repellat
-                ea
-                adipisci, eligendi id, voluptate </p>
+              <h2>01</h2>
+              <div class="name-detail">
+                <h3>
+                  Project 1
+                </h3>
+                <p>detail: Lorem ipsum dolor sit amet </p>
+              </div>
             </div>
             <div class="panel-btn">
               <button>VIEW PROJECT</button>
@@ -316,11 +320,16 @@
         <div class="panel-box-main">
           <div class="panel-text-btn">
             <div class="panel-text">
-              <h2>JOB 2</h2>
-              <p>detail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex, quisquam repellat
-                ea
-                adipisci, eligendi id, voluptate </p>
+              <h2>02</h2>
+              <div class="name-detail">
+                <h3>
+                  Project 2
+                </h3>
+                <p>detail: Lorem ipsum dolor sit amet </p>
+              </div>
+
             </div>
+
             <div class="panel-btn">
               <button>VIEW PROJECT</button>
             </div>
@@ -341,10 +350,13 @@
         <div class="panel-box-main">
           <div class="panel-text-btn">
             <div class="panel-text">
-              <h2>JOB 3</h2>
-              <p>detail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex, quisquam repellat
-                ea
-                adipisci, eligendi id, voluptate </p>
+              <h2>03</h2>
+              <div class="name-detail">
+                <h3>
+                  Project 3
+                </h3>
+                <p>detail: Lorem ipsum dolor sit amet </p>
+              </div>
             </div>
             <div class="panel-btn">
               <button>VIEW PROJECT</button>
@@ -373,7 +385,8 @@
   </div>
 
   <!-- --------------- contect-me  ------------------- -->
-  <section class="section-contact-me">
+  <section class="section-contact-me" id="section-contact-me">
+
     <img src="img/sayfa.png" class="right" alt="">
     <img src="img/mun.png" class="left" alt="">
     <div class="box-contact-me">
@@ -394,41 +407,36 @@
 
       </div>
   </section>
-<footer>
-  <div class="text-footer">
-    <div class="name">
-      <h1>FASMEE <br> DEVELOPER</h1>
+  <footer>
+    <div class="text-footer">
+      <div class="name">
+        <h1>FASMEE <br> DEVELOPER</h1>
+      </div>
+      <div class="link">
+        <div class="socell">
+          <h3>socell</h3>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">YouTube</a>
+        </div>
+        <div class="socell">
+          <h3>Contect</h3>
+          <p>fasmee13597@gmail.com</p>
+          <p>012-345-6789</p>
+          <p>123 xxx xxx xxxx xxxx xxxx <br> xxx xxxx xxx</p>
+        </div>
+
+      </div>
     </div>
-    <div class="link"></div>
-  </div>
-  <div class="footer-img-grid">
-    <div class="">
-      <img src="img/footer/x.png" alt="">
+    <div class="footer-img-grid">
+      <div class="">
+        <img src="img/footer/full.png" alt="">
+      </div>
+
+
     </div>
-    <div class="">
-      <img src="img/footer/x2.png" alt="">
-    </div>
-    <div class="">
-      <img src="img/footer/x3.png" alt="">
-    </div>
-    <div class="">
-      <img src="img/footer/x.png" alt="">
-    </div>
-    <div class="">
-      <img src="img/footer/x.png" alt="">
-    </div>
-    <div class="">
-      <img src="img/footer/x.png" alt="">
-    </div>
-    <div class="">
-      <img src="img/footer/x.png" alt="">
-    </div>
-    <div class="">
-      <img src="img/footer/x.png" alt="">
-    </div>
- 
-  </div>
-</footer>
+  </footer>
 
 
 
@@ -438,19 +446,28 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
   <script src="gsap.js"></script>
   <script>
+    // Mouse move floating image
     document.addEventListener('mousemove', (e) => {
       const image = document.getElementById('floating-image');
       const mouseX = e.clientX;
       const mouseY = e.clientY;
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
-
-      // Calculate movement (smaller values for subtler movement)
       const moveX = (mouseX - windowWidth / 2) * 0.09;
       const moveY = (mouseY - windowHeight / 2) * 0.09;
-
-      // Apply the transform
       image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').replace('#', '');
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
   </script>
 </body>

@@ -110,7 +110,7 @@ let scollProjectBox = gsap.timeline({
   start: "top 80%",
   end: "top 50%",
   scrub: 3,
-  markers: true,
+  // markers: true,
  }
 });
 scollProjectBox.to(".section-project h1", { color: "#ffffffff", duration: 10, ease: "none" });
@@ -154,6 +154,23 @@ gsap.utils.toArray(".panel").forEach((panel, i) => {
   }
  );
 });
+
+// -------------------- contect me ------------------ //
+
+let scollContactBox = gsap.timeline({
+ scrollTrigger: {
+  trigger: ".section-contact-me",
+  start: "top 80%",
+  end: "top 50%",
+  scrub: 3,
+  // markers: true,
+ }
+});
+scollContactBox.to(".section-contact-me .right", { x: -80, y: 70, opacity: 1, duration: 10 }, "+=1.5");
+scollContactBox.to(".section-contact-me .left", { x: 230, y: -80, opacity: 1, duration: 10 }, "+=1.5");
+
+
+
 
 
 

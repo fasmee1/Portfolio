@@ -8,12 +8,16 @@
   box-sizing: border-box;
   font-family: "Prompt", sans-serif;
   color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #000000;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+
+
 
 nav {
   width: 100%;
@@ -21,7 +25,8 @@ nav {
   left: 0;
   z-index: 1000;
 }
-footer{
+
+footer {
   height: 40vh;
   background: #000;
 
@@ -42,6 +47,7 @@ section {
   overflow: hidden;
 
 }
+
 /* img-hero */
 
 nav ul li a {
@@ -506,6 +512,7 @@ nav ul li a {
   /* border: 1px solid #b60000; */
 
 }
+
 /* box-contact-me */
 .box-img {
   width: 100%;
@@ -564,7 +571,7 @@ nav ul li a {
 .panel-box-main .box {
   /* border: 2px solid rgb(255, 255, 255); */
   width: 100%;
-  height: 100%;
+  height: 83%;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -575,14 +582,16 @@ nav ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   /* border: 1px solid rgb(186, 8, 8); */
+  height: 12%;
 }
 
 .panel-btn {
   /* border: 1px solid rgb(186, 8, 8); */
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 100%;
 
 }
@@ -590,7 +599,7 @@ nav ul li a {
 .panel-btn button {
   padding: 10px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 68px;
   background: rgb(0, 0, 0);
   border: 1px solid rgb(255, 255, 255);
   color: #ffffff;
@@ -605,9 +614,30 @@ nav ul li a {
 }
 
 
+.name-detail {
+  /* border: 1px solid #00b518; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.name-detail h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.name-detail p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: -.5rem;
+}
 
 .panel-text {
   width: 70%;
+  display: flex;
+  gap: 20px;
 }
 
 .box div {
@@ -618,9 +648,10 @@ nav ul li a {
 }
 
 .panel-box-main h2 {
-  font-size: 2vw;
+  font-size: 5.5vw;
   color: #ffffff;
   border: none;
+  font-weight: 800;
 }
 
 .panel-box-main p {
@@ -655,7 +686,7 @@ nav ul li a {
   background: #fff;
   margin-top: -5rem;
   padding-top: 5rem;
-  border: 1px solid rgb(209, 66, 66);
+  /* border: 1px solid rgb(209, 66, 66); */
   position: relative;
   display: flex;
   align-items: center;
@@ -664,18 +695,20 @@ nav ul li a {
 
 .right {
   position: absolute;
-  top: 0%;
-  right: 0;
+  top: -7%;
+  right: -7%;
   width: 350px;
   /* opacity: ; */
 }
+
 .left {
   position: absolute;
-bottom: 0%; 
- left: -5%;
+  bottom: -20%;
+  left: -25%;
   width: 350px;
   /* opacity: ; */
 }
+
 /* panel-box-main */
 .box-contact-me {
   max-width: 80%;
@@ -783,34 +816,72 @@ bottom: 0%;
 
 
 /* ----------------- footer -------------- */
-.footer-img-grid{
-  display: grid;
-  grid-template-columns: repeat(8,1fr);
-}
-.text-footer{
+.footer-img-grid {}
+
+.text-footer {
   /* border: 1px solid red; */
   height: 25vh;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-.text-footer div{
+
+.socell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
   /* border: 1px solid #ffffff; */
 }
-.footer-img-grid div{
-  /* border: 1px solid #ffffff; */
-  height: 23.4vh;
+
+.link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.footer-img-grid div img{
+
+.socell p {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.socell a,
+.socell p {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+
+.socell h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.text-footer div {
+  /* border: 1px solid #ffffff; */
+}
+
+.footer-img-grid div {
+  /* border: 1px solid #ffffff; */
+  height: 23.9vh;
+}
+
+.footer-img-grid div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.name{
+
+.name {
   display: flex;
   align-items: center;
   padding-left: 10%;
+
 }
-.name h1{
+
+.name h1 {
   font-size: 5rem;
-    line-height: 1.1;
+  line-height: 1.1;
+  color: #000;
+  /* สีตัวอักษรข้างใน */
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.864);
 }
