@@ -14,21 +14,37 @@
     <div class="text-center">
       <h1>Welcome to My Portfolio</h1>
     </div>
-    <ul>
-      <li><a href="#Home">Home</a></li>
-      <li><a href="#section-skill">Skill</a></li>
-      <li><a href="#section-aboutme">About</a></li>
-      <li><a href="#Services-section">Services</a></li>
-      <li><a href="#section-contact-me">Contact</a></li>
-    </ul>
+    <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="set-nav">
+      <ul id="main-nav">
+        <div>
+          <h1>Menu</h1>
+        </div>
+
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#section-skill">Skill</a></li>
+        <li><a href="#section-aboutme">About</a></li>
+        <li><a href="#Services-section">Services</a></li>
+        <li><a href="#section-contact-me">Contact</a></li>
+      </ul>
+
+    </div>
+
+
   </nav>
 
 
   <section class="Home" id="Home">
 
-    <h2 class="text-name-hero">HI, I'M FASMEE</h2>
+    <h2 class="text-name-hero"><span>HI, I'M </span>FASMEE</h2>
     <div class="hero">
+
       <div class="text-hero">
+
         <h1 class="text-hero-1">A WEB DEVELOPER I am a web developer <br> with a passion for creating beautiful <br> and
           functional 🙂
 
@@ -42,6 +58,21 @@
         <button>CONTACT ME</button>
       </div>
     </div>
+    <!-- ประสบการการทำงาน -->
+    <div class="main-box-content-hero">
+      <div class="box-content-hero">
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+
+      <div class="btn-hero2">
+        <button>CONTACT ME</button>
+      </div>
+    </div>
+
+
+
 
   </section>
 
@@ -339,10 +370,6 @@
             <div class="box-img">
               <img src="img/abstract/img8.png" alt="">
             </div>
-            <div class="box-img">
-              <img src="img/abstract/img4.png" alt="">
-            </div>
-
           </div>
         </div>
       </div>
@@ -367,13 +394,6 @@
             <div class="box-img">
               <img src="img/abstract/img1.png" alt="">
             </div>
-            <div class="box-img">
-              <img src="img/abstract/img10.png" alt="">
-            </div>
-            <div class="box-img">
-              <img src="img/abstract/img9.png" alt="">
-            </div>
-
           </div>
         </div>
       </div>
@@ -410,7 +430,7 @@
   <footer>
     <div class="text-footer">
       <div class="name">
-        <h1>FASMEE <br> DEVELOPER</h1>
+        <!-- <h1>FASMEE <br> DEVELOPER</h1> -->
       </div>
       <div class="link">
         <div class="socell">
@@ -457,6 +477,23 @@
       const moveY = (mouseY - windowHeight / 2) * 0.09;
       image.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
+
+    // Hamburger menu toggle with X animation
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('main-nav');
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+      });
+      // Close menu when click link (optional UX)
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          hamburger.classList.remove('active');
+        });
+      });
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
